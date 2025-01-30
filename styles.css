@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -8,9 +9,23 @@ html {
 }
 
 #container {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 65em;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+#width {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-item {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
 }
