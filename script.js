@@ -1,6 +1,4 @@
 const divContainer = document.querySelector("#container");
-const divContainerHeight = document.querySelector("#height");
-const divContainerWidth = document.querySelector("#width");
 
 function makeGrid(width, height) {
   for (let j = 0; j < height; j++) {
@@ -10,9 +8,10 @@ function makeGrid(width, height) {
       let divGrid = document.createElement("div");
       divGrid.classList.add("grid-item");
       gridRow.appendChild(divGrid);
+      // adding hover effect
     }
-    divContainerHeight.appendChild(gridRow);
+    divContainer.appendChild(gridRow);
   }
 }
 
-makeGrid(24, 24);
+makeGrid(18, 18);
