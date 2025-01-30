@@ -12,9 +12,7 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   display: flex;
-  width: 50em;
-  height: 50em;
-  overflow: hidden;
+
   flex-direction: column;
   align-items: center;
 }
@@ -27,4 +25,17 @@ html {
 
 .row {
   display: flex;
+}
+
+.colorPalette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+  border: 1px solid black;
+}
+
+#colorChooser {
+  justify-self: center;
 }

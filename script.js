@@ -1,6 +1,10 @@
 const divContainer = document.querySelector("#container");
+const colorChooser = document.querySelector("#colorChooser");
 
 function makeGrid(width, height) {
+  function drawPen(color) {
+    divGrid.style.backgroundColor = `${color}`;
+  }
   for (let j = 0; j < height; j++) {
     let gridRow = document.createElement("div");
     gridRow.classList.add("row");
@@ -9,9 +13,13 @@ function makeGrid(width, height) {
       divGrid.classList.add("grid-item");
       gridRow.appendChild(divGrid);
       // adding hover effect
+      divGrid.addEventListener(
+        "mouseenter",
+        () => (divGrid.style.backgroundColor = colorChooser.value)
+      );
     }
     divContainer.appendChild(gridRow);
   }
 }
 
-makeGrid(18, 18);
+makeGrid(36, 36);
