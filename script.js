@@ -1,6 +1,13 @@
 const divContainer = document.querySelector("#container");
 const colorChooser = document.querySelector("#colorChooser");
 
+// button for new grid
+const buttonReset = document.querySelector("#reset");
+
+// width/height of grid
+let width = 16;
+let height = 16;
+
 function makeGrid(width, height) {
   function drawPen(color) {
     divGrid.style.backgroundColor = `${color}`;
@@ -21,5 +28,17 @@ function makeGrid(width, height) {
     divContainer.appendChild(gridRow);
   }
 }
+buttonReset.addEventListener("click", gridButton);
 
-makeGrid(36, 36);
+function gridButton() {
+  const newSize = prompt("size?", height);
+  if (newSize !== 101) {
+    height = newSize;
+    width = newSize;
+    divContainer.innerHTML = "";
+    makeGrid(width, height);
+    console.log(height, width);
+  }
+}
+
+makeGrid(26, 26);
