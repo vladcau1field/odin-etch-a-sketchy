@@ -32,7 +32,7 @@ function makeGrid(width, height) {
 buttonReset.addEventListener("click", gridButton);
 
 function gridButton() {
-  const newSize = parseInt(prompt("size?(max 100", height));
+  const newSize = parseInt(prompt("size?(max 100)", height));
   if (isNaN(newSize) || newSize <= 0 || newSize > 100) {
     alert("only between 0 - 100.");
     return;
